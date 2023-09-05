@@ -11,9 +11,8 @@
 
 
 <div class="flex justify-center items-center w-screen h-screen overflow-hidden flex-col gap-2">
-    <div class="flex gap-1 lg:w-1/4 w-1/2">
-    <img src="/favicon.svg" alt="GrizzHacks">
-    <p class="text-3xl text-indigo-500 md:text-6xl">6</p>
+    <div class="flex gap-1">
+    <img src="/Grizzhacks.png" alt="GrizzHacks">
     </div>
     <h3 class="md:text-4xl text-2xl font-bold"><TypeWriter words={["Rebooted"]}/></h3>
     
