@@ -53,8 +53,8 @@
 	});
 </script>
 
-<div class="flex text-indigo-400">
-	{output}<span class=" blink text-indigo-500">|</span>
+<div class="flex text-neutral-400">
+	{output}<span class=" blink text-neutral-400">|</span>
 </div>
 
 <style>
