@@ -3,17 +3,14 @@ import type { Actions } from './$types';
 
 export const actions: Actions = {
 	default: async (event) => {
-		// Regex for testing if email is edu or not
-		const eduRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.(edu)$/i;
 		// Retrieve data from client form
 		const formData = Object.fromEntries(await event.request.formData());
-		// Test regex and return if it doesn't pass
-		if (!eduRegex.test(String(formData.email))) {
-			console.log('invalid email');
-			return {
-				response: 'invalid email'
-			};
-		}
+        if (!formData.email){
+            return{
+                response: "invalid email"
+            }
+        }
+
 
 		// Loops API integration. For adding new contact.
 		let loopsResponse;
@@ -24,8 +21,7 @@ export const actions: Actions = {
 				Authorization: `Bearer ${LOOPS_KEY}`
 			},
 			body: JSON.stringify({
-				email: formData.email,
-				firstName: formData.firstName
+				email: formData.email
 			})
 		})
 			.then((response) => response.json())
@@ -40,7 +36,12 @@ export const actions: Actions = {
 				response: 'email already registered'
 			};
 		}
-
+        // If loops says it's an invalid email.
+        if (loopsResponse!.message == 'Invalid email address.') {
+			return {
+				response: 'invalid email'
+			};
+		}
 		// If loops fails for some other reason
 		if ((loopsResponse!.success = false)) {
 			return {
@@ -54,3 +55,17 @@ export const actions: Actions = {
 		};
 	}
 } satisfies Actions;
+
+
+
+
+// Not necessary now
+function validateEdu(email: string){
+    const eduRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.(edu)$/i;
+    return eduRegex.test(email)
+}
+// Validate email
+function validateEmail(email: string){
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email)
+}

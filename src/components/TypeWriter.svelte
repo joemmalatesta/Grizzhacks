@@ -29,22 +29,10 @@
 		while (letterIndex < word.length) {
 			output += word[letterIndex];
 			letterIndex++;
-			await sleep(60);
+			await sleep(120);
 		}
 		// Word sits for a second before deleting
 		await sleep(1400);
-		await deleteWord();
-		await sleep(200);
-
-		// Loop through all possible words and restart at end
-		if (wordIndex < words.length - 1) {
-			wordIndex++;
-		} else {
-			wordIndex = 0;
-		}
-
-		//Loop forever!
-		await type();
 	}
 
 	onMount(async () => {
