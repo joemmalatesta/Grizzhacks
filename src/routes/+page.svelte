@@ -89,7 +89,7 @@
 		<p class="md:text-3xl text-xl ml-1">
 			Metro Detroit's largest Hacakathon is back and <span class="text-indigo-400 font-semibold"
 				>in person</span
-			> for the sixth installation
+			> for the sixth installment
 		</p>
 	</section>
 
