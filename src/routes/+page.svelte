@@ -25,47 +25,6 @@
 	<title>GrizzHacks</title>
 </svelte:head>
 
-<!-- <div class="flex justify-center items-center w-screen h-screen overflow-hidden flex-col gap-2">
-	<div class="flex flex-col justify-center items-center mx-3">
-		<img class="w-12" src="/Grizzhacks.png" alt="GrizzHacks" />
-		<h3 class="md:text-2xl text-xl font-bold"><TypeWriter words={['Rebooted']} /></h3>
-	</div>
-
-	<h3 class="md:text-3xl text-xl md:w-[35rem] text-center text-neutral-400 my-5">
-		Oakland University's Hackathon is back March 9-10th
-	</h3>
-
-	<form method="post" class="flex flex-col gap-2">
-		<p>First name</p>
-		<input
-			class="outline rounded-lg active:outline-white"
-			type="text"
-			bind:value={firstName}
-			name="firstName"
-		/>
-		<p>Email</p>
-		<input
-			class="outline rounded-lg active:outline-white"
-			type="email"
-			bind:value={email}
-			name="email"
-		/>
-		{#if incorrectEmailError}
-			<p class="text-red-500 text-xs">Enter valid .edu email</p>
-		{/if}
-		<button>Pre-Register</button>
-		{#if emailAlreadyRegistered}
-			<p class="text-red-500 text-xs">Email already pre-registered.</p>
-		{/if}
-	</form>
-
-	<h3 class="md:text-xl md:w-[30rem] text-center">
-		Interested in becoming a sponsor? Reach out to <a
-			class="text-indigo-400 underline underline-offset-4 hover:underline-offset-8 transition-all"
-			href="mailto:grizzhacksou@gmail.com">grizzhacksou@gmail.com</a
-		> for more information
-	</h3>
-</div> -->
 
 <div class="md:mx-56 md:mt-12 mx-4 mt-6">
 	<!-- Navbar -->
@@ -74,17 +33,17 @@
 		<div class="flex items-start">
 			<SectionHeader title={'GrizzHacks'} />
 			<div class="relative">
-                <h1
-                    class="absolute bg-gradient-to-b from-indigo-500 to-indigo-300 bg-clip-text text-2xl py-2 text-transparent font-bold lg:text-3xl"
-                >
-                    6
-                </h1>
-                <h1
-                    class="bg-gradient-to-b from-indigo-500 blur-sm opacity-40 to-indigo-300 bg-clip-text text-2xl py-2 text-transparent font-bold lg:text-3xl"
-                >
-                    6
-                </h1>
-            </div>
+				<h1
+					class="absolute bg-gradient-to-b from-indigo-500 to-indigo-300 bg-clip-text text-2xl py-2 text-transparent font-bold lg:text-3xl"
+				>
+					6
+				</h1>
+				<h1
+					class="bg-gradient-to-b from-indigo-500 blur-sm opacity-40 to-indigo-300 bg-clip-text text-2xl py-2 text-transparent font-bold lg:text-3xl"
+				>
+					6
+				</h1>
+			</div>
 		</div>
 		<p class="md:text-3xl text-xl ml-1">
 			Metro Detroit's largest Hacakathon is back and <span class="text-indigo-400 font-semibold"
@@ -114,10 +73,10 @@
 
 		<form method="post" class="flex flex-col mt-3">
 			<div
-				class="flex justify-between md:w-1/3 ring-neutral-400 ring-2 rounded-lg ring-opacity-70 drop-shadow-md"
+				class="flex justify-between md:w-1/3  {form?.response == 'success' ? "ring-green-400": "ring-neutral-400"} ring-2 rounded-lg ring-opacity-70 drop-shadow-md"
 			>
 				<input
-					class="w-5/6 rounded-l-lg p-2 text-xl focus:outline-none bg-neutral-700 bg-opacity-40 focus:placeholder:opacity-0 placeholder:transition-all border-r-2 border-neutral-400/70"
+					class="w-5/6 rounded-l-lg p-2 text-xl focus:outline-none bg-neutral-700 bg-opacity-40 focus:placeholder:opacity-0 placeholder:transition-all border-r-2 {form?.response == 'success' ? "border-green-400/70": "border-neutral-400/70"}"
 					type="email"
 					placeholder="GrizzHacks@gmail.com"
 					bind:value={email}
