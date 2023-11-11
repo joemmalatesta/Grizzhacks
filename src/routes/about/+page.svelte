@@ -11,7 +11,7 @@
     <SectionHeader  title={"Meet the team"}/>
 </div>
 <div class="flex justify-center items-center gap-10 flex-wrap">
-	<img src="/team/joe.jpg" alt="" class=" xl:w-48 xl:h-48 lg:w-44 lg:h-44 w-36 h-36 object-cover rounded-full hover:shadow-lg hover:shadow-indigo-400 cursor-pointer ring-2 ring-indigo-400 ring-opacity-40" />
+	<a href="https://www.linkedin.com/in/joe-malatesta/" target="_blank"><img src="/team/joe.jpg" alt="" class=" xl:w-48 xl:h-48 lg:w-44 lg:h-44 w-36 h-36 object-cover rounded-full hover:shadow-lg hover:shadow-indigo-400 cursor-pointer ring-2 ring-indigo-400 ring-opacity-40" /></a>
 	<img src="/team/amelio.jpg" alt="" class=" xl:w-48 xl:h-48 lg:w-44 lg:h-44 w-36 h-36 object-cover rounded-full hover:shadow-lg hover:shadow-indigo-400 cursor-pointer ring-2 ring-indigo-400 ring-opacity-40" />
 	<img src="/team/jacob.avif" alt="" class=" xl:w-48 xl:h-48 lg:w-44 lg:h-44 w-36 h-36 object-cover rounded-full hover:shadow-lg hover:shadow-indigo-400 cursor-pointer ring-2 ring-indigo-400 ring-opacity-40" />
 	<img src="/team/halee.jpg" alt="" class=" xl:w-48 xl:h-48 lg:w-44 lg:h-44 w-36 h-36 object-cover rounded-full hover:shadow-lg hover:shadow-indigo-400 cursor-pointer ring-2 ring-indigo-400 ring-opacity-40" />
