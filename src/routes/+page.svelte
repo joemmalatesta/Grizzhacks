@@ -26,7 +26,7 @@
 </svelte:head>
 
 
-<div class="md:mx-56 md:mt-12 mx-4 mt-6">
+<div class="">
 	<!-- Navbar -->
 	<!-- Hero -->
 	<section class="w-full">
