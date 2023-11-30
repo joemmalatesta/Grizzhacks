@@ -5,62 +5,62 @@
 	const members = [
 		{
 			name: 'Joe',
-			source: '/team/joe.avif',
+			source: '/team/joe2.webp',
 			linkedIn: 'https://www.linkedin.com/in/joe-malatesta/'
 		},
 		{
 			name: 'Amelio',
-			source: '/team/amelio.avif',
+			source: '/team/amelio2.webp',
 			linkedIn: 'https://www.linkedin.com/in/amelio-mansour/'
 		},
 		{
 			name: 'Jacob',
-			source: '/team/jacob.avif',
+			source: '/team/jacob2.webp',
 			linkedIn: 'https://www.linkedin.com/in/jacob-souro/'
 		},
 		{
 			name: 'Dom',
-			source: '/team/dommy.avif',
+			source: '/team/dommy2.webp',
 			linkedIn: 'https://www.linkedin.com/in/dominick-kalaj-42980624b/'
 		},
 		{
 			name: 'Halee',
-			source: '/team/halee.avif',
+			source: '/team/halee2.webp',
 			linkedIn: 'https://www.linkedin.com/in/halee-tisler/'
 		},
 		{
 			name: 'Jacob',
-			source: '/team/grot.avif',
+			source: '/team/grot2.webp',
 			linkedIn: 'https://www.linkedin.com/in/jacob-grot-b3302b1b0/'
 		},
 		{
 			name: 'Bethany',
-			source: '/team/bethany.avif',
+			source: '/team/bethany2.webp',
 			linkedIn: 'https://www.linkedin.com/in/bethany-goss-77bg/'
 		},
 		{
 			name: 'Chris',
-			source: '/team/chris.avif',
+			source: '/team/chris2.webp',
 			linkedIn: 'https://www.linkedin.com/in/christopheracastillo/'
 		},
 		{
 			name: 'Domenic',
-			source: '/team/dom.avif',
+			source: '/team/dom2.webp',
 			linkedIn: ''
 		},
 		{
 			name: 'Josh',
-			source: '/team/josh.avif',
+			source: '/team/josh2.webp',
 			linkedIn: 'https://www.linkedin.com/in/joshua-pagonas-0896511a4/'
 		},
 		{
 			name: 'Noah',
-			source: '/team/noah.avif',
+			source: '/team/noah2.webp',
 			linkedIn: 'https://www.linkedin.com/in/noahsabaj/'
 		},
 		{
 			name: 'Sam',
-			source: '/team/sam.avif',
+			source: '/team/sam2.webp',
 			linkedIn: 'https://www.linkedin.com/in/samuelhjung/'
 		}
 	];
