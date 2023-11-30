@@ -73,17 +73,17 @@
 
 		<form method="post" class="flex flex-col mt-3">
 			<div
-				class="flex justify-between md:w-1/3  {form?.response == 'success' ? "ring-green-400": "ring-neutral-400"} ring-2 rounded-lg ring-opacity-70 drop-shadow-md"
+				class="flex justify-between md:w-1/3  {form?.response == 'success' ? "ring-green-400": "ring-neutral-700/60"} ring-2 rounded-lg ring-opacity-70 drop-shadow-md"
 			>
 				<input
-					class="w-5/6 rounded-l-lg p-2 text-xl focus:outline-none bg-neutral-700 bg-opacity-40 focus:placeholder:opacity-0 placeholder:transition-all border-r-2 {form?.response == 'success' ? "border-green-400/70": "border-neutral-400/70"}"
+					class="w-5/6 rounded-l-lg p-2 text-xl focus:outline-none bg-neutral-900/30 bg-opacity-40 focus:placeholder:opacity-0 placeholder:transition-all border-r-2 {form?.response == 'success' ? "border-green-400/70": "border-neutral-700/60"}"
 					type="email"
 					placeholder="GrizzHacks@gmail.com"
 					bind:value={email}
 					name="email"
 				/>
-				<button class="w-1/6 bg-neutral-700 bg-opacity-80 hover:bg-opacity-100 p-2 rounded-r-lg">
-					->
+				<button class="w-1/6 bg-neutral-900/30 bg-opacity-80 hover:bg-opacity-100 p-2 rounded-r-lg flex justify-center items-center">
+					<img src="arrow.svg" alt="">
 				</button>
 			</div>
 			{#if incorrectEmailError}
