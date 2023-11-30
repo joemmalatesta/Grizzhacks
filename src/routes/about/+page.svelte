@@ -71,7 +71,7 @@
 			a: 'A Hackathon is a 24 hour engineering event where developers, designers, and managers build innovative software and hardware projects to compete for prizes.'
 		},
 		{
-			q: 'What can I expect from at GrizzHacks?',
+			q: 'What can I expect at GrizzHacks?',
 			a: "During the 24 hour event, you will be free to develop your project the whole time, but if you need a break we will have events, games, and workshops for you to partake in."
 		},
 		{
