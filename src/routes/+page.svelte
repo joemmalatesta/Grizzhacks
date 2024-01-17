@@ -1,6 +1,15 @@
 <script lang="ts">
 	import SectionHeader from '../components/SectionHeader.svelte';
-	import TypeWriter from '../components/TypeWriter.svelte';
+	import FaqElement from '../components/FaqElement.svelte';
+	import MemberPic from '../components/MemberPic.svelte';
+	import { tracks } from '$lib/tracks';
+	import { faq } from '$lib/faq'
+	import { sponsors } from '$lib/sponsors'
+	let activeFaq: number
+	
+	import { members } from '$lib/team'
+	import TrackCard from '../components/TrackCard.svelte';
+	import Sponsor from '../components/Sponsor.svelte';
 	export let form: any;
 
 	let incorrectEmailError: boolean = false;
@@ -25,83 +34,155 @@
 	<title>GrizzHacks</title>
 </svelte:head>
 
-
-<div class="">
-	<!-- Navbar -->
+<main>
 	<!-- Hero -->
-	<section class="w-full">
-		<div class="flex items-start">
-			<SectionHeader title={'GrizzHacks'} />
-			<div class="relative">
-				<h1
-					class="absolute bg-gradient-to-b from-indigo-500 to-indigo-300 bg-clip-text text-2xl py-2 text-transparent font-bold lg:text-3xl"
-				>
-					6
-				</h1>
-				<h1
-					class="bg-gradient-to-b from-indigo-500 blur-sm opacity-40 to-indigo-300 bg-clip-text text-2xl py-2 text-transparent font-bold lg:text-3xl"
-				>
-					6
-				</h1>
-			</div>
-		</div>
-		<p class="md:text-3xl text-xl ml-1">
-			Metro Detroit's largest Hacakathon is back and <span class="text-indigo-400 font-semibold"
-				>in person</span
-			> for the sixth installment
-		</p>
-	</section>
-
-	<!-- Icons for location and place -->
-	<section class="flex flex-col gap-4 md:mt-12 mt-5">
-		<div class="flex items-center gap-2">
-			<img class="md:w-12 w-8" src="pin.svg" alt="Location" />
-			<p class="md:text-2xl text-xl">Oakland University</p>
-		</div>
-		<div class="flex items-center gap-2">
-			<img class="md:w-12 w-8" src="time.svg" alt="Date" />
-			<p class="md:text-2xl text-xl">March 9-10th</p>
-		</div>
-	</section>
-
-	<!-- Signup -->
-	<section class="flex mt-12 flex-col">
-		<SectionHeader title={'Registration'} />
-		<p class="md:text-2xl text-lg">
-			Opening soon... In the meantime, sign up to be notified when registration goes live
-		</p>
-
-		<form method="post" class="flex flex-col mt-3">
-			<div
-				class="flex justify-between md:w-1/3  {form?.response == 'success' ? "ring-green-400": "ring-neutral-700/60"} ring-2 rounded-lg ring-opacity-70 drop-shadow-md"
+	<section class="w-full container">
+		<!-- Desktop pic -->
+		<img
+			src="DSC_0794-min.webp"
+			alt="GrizzHacks hero background"
+			class="w-full absolute inset-0 opacity-10 -scale-x-100 -z-50 hidden lg:block overflow-hidden"
+		/>
+		<!-- Phone Pic -->
+		<img
+			src="second-min.webp"
+			alt="GrizzHacks hero background"
+			class="w-screen absolute inset-0 opacity-10 -scale-x-100 -z-50 lg:hidden overflow-hidden"
+		/>
+		<div class="flex flex-col mt-12 md:mt-10 2xl:mt-20">
+			<h2 class="text-5xl lg:text-7xl 2xl:text-8xl font-light">Dream it,</h2>
+			<h1
+				class="text-7xl lg:text-9xl 2xl:text-9xl font-bold bg-gradient-to-b from-indigo-400 to-indigo-600 bg-clip-text text-transparent"
 			>
-				<input
-					class="w-5/6 rounded-l-lg p-2 text-xl focus:outline-none bg-neutral-900/30 bg-opacity-40 focus:placeholder:opacity-0 placeholder:transition-all border-r-2 {form?.response == 'success' ? "border-green-400/70": "border-neutral-700/60"}"
-					type="email"
-					placeholder="GrizzHacks@gmail.com"
-					bind:value={email}
-					name="email"
-				/>
-				<button class="w-1/6 bg-neutral-900/30 bg-opacity-80 hover:bg-opacity-100 p-2 rounded-r-lg flex justify-center items-center">
-					<img src="arrow.svg" alt="">
-				</button>
+				Build it.
+			</h1>
+			<!-- <p class="2xl:text-2xl lg:text-xl mx-2 text-neutral-300">A 24 hour engineering marathon designed for the </p> -->
+		</div>
+		<div class="flex flex-col gap-5 mb-10 mt-6">
+			<div class="flex gap-4 items-center">
+				<img class="w-12 lg:w-14 2xl:w-16" src="pin.svg" alt="" />
+				<p class="text-2xl lg:text-3xl 2xl:text-4xl font-semibold text-white">Oakland University</p>
 			</div>
-			{#if incorrectEmailError}
-				<p class="text-red-500 text-sm">Enter a valid email</p>
-			{/if}
-			{#if emailAlreadyRegistered}
-				<p class="text-red-500 text-sm">Email already registered</p>
-			{/if}
-		</form>
+			<div class="flex gap-4 items-center">
+				<img class="w-12 lg:w-14 2xl:w-16" src="time.svg" alt="" />
+				<p class="text-2xl lg:text-3xl 2xl:text-4xl font-semibold text-white">March 9-10th</p>
+			</div>
+		</div>
+		<div class="flex flex-col gap-4">
+			<a
+				href="https://grizzhacks.typeform.com/apply"
+				class="flex items-center justify-center p-3 px-5 text-2xl lg:text-3xl 2xl:text-3xl rounded-xl bg-indigo-600 hover:bg-indigo-700 w-fit text-white font-semibold relative ring-2 ring-indigo-700"
+				style="font-family: 'Montserrat', sans-serif;">Apply to GrizzHacks 6</a
+			>
+			<a
+				href="#about"
+				class="flex items-center justify-center p-2 px-6 text-xl rounded-xl hover:bg-gray-300 bg-white w-fit h-fit text-black font-semibold"
+				style="font-family: 'Montserrat', sans-serif;">Learn more</a
+			>
+		</div>
 	</section>
-	<!-- Sponsorship -->
-	<section class="flex mt-12 flex-col">
-		<SectionHeader title={'Sponsorship'} />
-		<p class="md:text-2xl text-lg mt-1">
-			Interested in becoming a sponsor? Reach out to <a
-				class="text-indigo-400 underline underline-offset-4 hover:underline-offset-8 transition-all"
-				href="mailto:grizzhacksou@gmail.com">grizzhacksou@gmail.com</a
-			> for more information
-		</p>
+	<!-- About -->
+	<section id="about" class="container 2xl:mt-72 lg:mt-44 mt-36 p-2 my-10 bg-gradient-to-b">
+		<div class=" flex justify-center mb-5"><SectionHeader title={'About'} /></div>
+		<div class="flex lg:flex-row flex-col gap-5">
+			<div class="flex flex-col lg:w-3/5 lg:m-0 justify-around">
+				<div class="flex gap-2 flex-col">
+				<div class="flex flex-col my-2">
+					<h4 class="text-xl lg:text-2xl 2xl:text-3xl font-semibold ">
+						GrizzHacks is back <i class="text-indigo-400">in person</i>
+					</h4>
+					<p class="2xl:text-lg">
+						GrizzHacks is a 24 hour engineering marathon, welcome to anyone. Whether you're a
+						seasoned developer building a new idea, a beginner looking to sharpen your skills, or a
+						unrelated major just interested in learning more, we have something for you!
+					</p>
+				</div>
+				<div class="flex flex-col my-2">
+					<!-- <h4 class="text-xl lg:text-2xl 2xl:text-3xl font-bold">How it works</h4> -->
+					<p class="2xl:text-lg">
+						Over the course of 24 hours, each team will build a project from the ground up and then
+						present their work to a panel of judges to compete for prizes! You're allowed to create
+						anything you can think up but if you need some inspiration, check out our <a href="#tracks" class="text-indigo-400 underline underline-offset-2 hover:underline-offset-4 transition-all">tracks</a> this
+						year.
+					</p>
+				</div>
+			</div>
+				<p class="2xl:text-lg">
+					Still have questions? Check out our <a
+						href="/#faq"
+						class="text-indigo-400 underline underline-offset-2 hover:underline-offset-4 transition-all"
+						>FAQ</a
+					>.
+				</p>
+			</div>
+			<div class="w-full lg:w-2/5 relative">
+				<img src="cool-min.webp" class="rounded-lg" alt="Top down view of GrizzHacks" />
+				<div class="inset-0 absolute bg-neutral-900/30 rounded-lg z-10"></div>
+			</div>
+		</div>
 	</section>
-</div>
+	<!-- Tracks -->
+	<section id="tracks" class="container my-10 oultine outline-white">
+		<div class=" flex justify-center mb-5"><SectionHeader title={'Tracks'} /></div>
+			<div class="grid lg:grid-cols-2 gap-4">
+				{#each tracks as track}
+					<TrackCard title={track.track} description={track.description} icon={track.icon} />
+				{/each}
+			</div>
+	</section>
+	
+	<!-- Sponsors -->
+	<section id="sponsors" class="container my-16">
+		<div class="flex justify-center mb-5"><SectionHeader title={'Sponsors'} /></div>
+		<div class="flex lg:flex-row flex-col gap-6">
+			<div class="flex flex-col gap-4 lg:w-3/5 lg:m-0 justify-around">
+				<div class="flex flex-col my-2">
+					<h4 class="text-xl lg:text-2xl 2xl:text-3xl font-semibold ">
+						These guys make GrizzHacks possible!
+					</h4>
+					<p class="2xl:text-xl lg:text-lg mt-2">
+						Our sponsors enable us to bring an unparalleled experience to Oakland University year after year. If you want to help us continue to empower creativity, collaboration, and entrepreneurship among students,
+						contact <a class="text-indigo-400 underline underline-offset-2 hover:underline-offset-4 transition-all" href="mailto:grizzhacksou@gmail.com">grizzhacksou@gmail.com</a>.
+					</p>
+				</div>
+				<div class="flex flex-wrap gap-4 items-center justify-center">
+					{#each sponsors as sponsor}
+						<Sponsor name={sponsor.name} tier={sponsor.tier} logo={sponsor.logo} link={sponsor.link} />						
+					{/each}
+				</div>
+			</div>
+				
+			<div class="w-full lg:w-2/5 relative">
+				<img src="sponsors-min.webp" class="rounded-lg" alt="Sponsors at GrizzHacks" />
+				<div class="inset-0 absolute bg-neutral-900/30 rounded-lg z-10"></div>
+			</div>
+		</div>
+	</section>
+	<!-- FAQ's -->
+	<section id="faq" class="container my-16">
+		<div class="flex justify-center mb-5"><SectionHeader title={"FAQ's"} /></div>
+		<div class="grid lg:grid-cols-2 grid-cols-1 gap-1">
+			{#each faq as question, index}
+					<!-- svelte-ignore a11y-no-static-element-interactions -->
+					<div on:click={() => {activeFaq = index}} on:keypress={() => {activeFaq = index}}>
+					<FaqElement question={question.q} answer={question.a} active={index == activeFaq}/></div>
+			{/each}
+		</div>
+	</section>
+	<!-- Team -->
+	<section id="team" class="container my-16">
+		<div class="flex justify-center mb-5"><SectionHeader title={'Meet the team'} /></div>
+		<div class="flex justify-center items-center md:gap-10 gap-5 flex-wrap mt-6">
+			{#each members as member}
+				<MemberPic source={member.source} linkedIn={member.linkedIn} name={member.name} />
+			{/each}
+		</div>
+	</section>
+</main>
+
+
+<style>
+	.container{
+		@apply px-2;
+	}
+</style>

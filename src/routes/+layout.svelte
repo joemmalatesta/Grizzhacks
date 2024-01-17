@@ -4,8 +4,12 @@
 	import Navbar from '../components/Navbar.svelte';
 </script>
 
-<div class="md:mx-12 lg:mx-24 xl:mx-40 2xl:mx-56 mx-4">
+<div class="container">
 	<Navbar />
-	<slot />
-	<Footer />
+</div>
+<slot />
+<div class="bg-indigo-700">
+	<div class="container">
+		<Footer />
+	</div>
 </div>

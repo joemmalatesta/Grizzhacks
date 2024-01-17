@@ -3,27 +3,27 @@
 
 	export let question: string;
 	export let answer: string;
-	export let expanded: boolean = false;
+	export let active: boolean = false;
 </script>
 
-<div class="rounded-md  {expanded ? "bg-neutral-600/60" : "bg-neutral-950/60"} hover:bg-neutral-600/80 flex flex-col justify-start p-2 m-1 ring-2 ring-neutral-600/60">
+<div class="rounded-md  {active ? "bg-neutral-950/60" : "bg-neutral-950/80"} hover:bg-neutral-900/40 flex flex-col justify-start p-3 ">
 	<!-- svelte-ignore a11y-no-static-element-interactions -->
 	<div
 		class="flex justify-between cursor-pointer"
 		on:click={() => {
-			expanded = !expanded;
+			active = !active;
 		}}
 		on:keypress={() => {
-			expanded = !expanded;
+			active = !active;
 		}}
 	>
-		<h5 class="xl:text-2xl md:text-xl text-lg text-white">{question}</h5>
-		<img src="/arrow.svg" alt="Expand" class="w-4 transition-all duration-300 {expanded ? "rotate-90" : "" }" />
+		<h5 class="xl:text-2xl md:text-xl text-lg text-white font-semibold">{question}</h5>
+		<img src="/arrow.svg" alt="Expand" class="w-4 transition-all duration-300 {active ? "rotate-90" : "" }" />
 		
 	</div>
-	{#if expanded}
+	{#if active}
 	<div transition:slide class="w-fit">
-		<p class="my-1" >{@html answer}</p>
+		<p class="my-1 text-white xl:text-lg" >{@html answer}</p>
 	</div>
 		
 	{/if}
