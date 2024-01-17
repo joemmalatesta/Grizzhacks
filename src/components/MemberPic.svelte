@@ -9,7 +9,7 @@
 </script>
 
 <div class="flex flex-col items-center gap-0.5 relative">
-	<div class="absolute inset-0 bg-neutral-950/10 rounded-full"></div>
+	<div class="absolute inset-0 bg-neutral-950/10 rounded-full hidden xl:block"></div>
 	<a
 		href={linkedIn}
 		class="relative xl:w-44 xl:h-44 lg:w-36 lg:h-36 w-16 h-16 object-cover rounded-full cursor-pointer ring-2 ring-indigo-400 ring-opacity-40"

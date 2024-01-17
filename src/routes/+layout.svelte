@@ -4,12 +4,12 @@
 	import Navbar from '../components/Navbar.svelte';
 </script>
 
-<div class="container">
+<div class="containerr">
 	<Navbar />
 </div>
 <slot />
 <div class="bg-indigo-700">
-	<div class="container">
+	<div class="containerr">
 		<Footer />
 	</div>
 </div>
