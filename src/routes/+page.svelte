@@ -82,7 +82,7 @@
 		</div>
 	</section>
 	<!-- About -->
-	<section id="about" class="containerr 2xl:mt-72 lg:mt-44 mt-36 p-2 my-10 bg-gradient-to-b">
+	<div id="about" class="containerr 2xl:mt-72 lg:mt-44 mt-36 p-2 my-10 bg-gradient-to-b">
 		<div class=" flex justify-center mb-5"><SectionHeader title={'About'} /></div>
 		<div class="flex lg:flex-row flex-col gap-5">
 			<div class="flex flex-col lg:w-3/5 lg:m-0 justify-around">
@@ -123,7 +123,7 @@
 				<div class="inset-0 absolute bg-neutral-900/30 rounded-lg z-10" />
 			</div>
 		</div>
-	</section>
+	</div>
 	<!-- Tracks -->
 	<section id="tracks" class="containerr my-10 oultine outline-white">
 		<div class=" flex justify-center mb-5"><SectionHeader title={'Tracks'} /></div>
@@ -152,7 +152,7 @@
 						>.
 					</p>
 				</div>
-				<div class="flex flex-wrap gap-4 items-center justify-center">
+				<!-- <div class="flex flex-wrap gap-4 items-center justify-center">
 					{#each sponsors as sponsor}
 						<Sponsor
 							name={sponsor.name}
@@ -161,7 +161,7 @@
 							link={sponsor.link}
 						/>
 					{/each}
-				</div>
+				</div> -->
 			</div>
 
 			<div class="w-full lg:w-2/5 relative">
@@ -173,7 +173,41 @@
 	<!-- FAQ's -->
 	<section id="faq" class="containerr my-16">
 		<div class="flex justify-center mb-5"><SectionHeader title={"FAQ's"} /></div>
-		<div class="grid lg:grid-cols-2 grid-cols-1 gap-1">
+		<div class="hidden justify-center gap-1 lg:flex">
+			<div class="flex flex-col w-1/2 mt-1 ">
+				{#each faq as question, index}
+				<!-- svelte-ignore a11y-no-static-element-interactions -->
+					<div
+					class="my-0.5 "
+						on:click={() => {
+							activeFaq = index;
+						}}
+						on:keypress={() => {
+							activeFaq = index;
+						}}
+					>
+						<FaqElement question={question.q} answer={question.a} active={index == activeFaq} show={index % 2 == 0} />
+					</div>
+				{/each}
+			</div>
+			<div class="flex flex-col w-1/2 ">
+				{#each faq as question, index}
+				<!-- svelte-ignore a11y-no-static-element-interactions -->
+					<div
+					class="my-0.5"
+						on:click={() => {
+							activeFaq = index;
+						}}
+						on:keypress={() => {
+							activeFaq = index;
+						}}
+					>
+						<FaqElement question={question.q} answer={question.a} active={index == activeFaq} show={index % 2 != 0} />
+					</div>
+				{/each}
+			</div>
+		</div>
+		<div class="grid lg:hidden grid-cols-1 gap-1">
 			{#each faq as question, index}
 				<!-- svelte-ignore a11y-no-static-element-interactions -->
 				<div
@@ -184,7 +218,7 @@
 						activeFaq = index;
 					}}
 				>
-					<FaqElement question={question.q} answer={question.a} active={index == activeFaq} />
+					<FaqElement question={question.q} answer={question.a} active={index == activeFaq} show={true} />
 				</div>
 			{/each}
 		</div>
@@ -203,5 +237,9 @@
 <style>
 	.containerr {
 		@apply px-2;
+	}
+
+	section {
+		@apply my-24;
 	}
 </style>
