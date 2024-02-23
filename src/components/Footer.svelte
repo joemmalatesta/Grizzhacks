@@ -1,7 +1,7 @@
 <script>
 </script>
 
-<div class="flex justify-between py-3 mt-5 items-center mx-2">
+<div class="flex justify-between py-3 mt-5 items-center">
 	<a href="/" class="md:text-2xl text-lg text-white">&copy GrizzHacks {new Date().getFullYear()}</a>
 	<div class="flex gap-2 items-center">
 		<a target="_blank" href="https://www.linkedin.com/company/grizzhacks/?viewAsMember=true"><img class="w-6 md:w-10" src="/linkedin.svg" alt=""></a>

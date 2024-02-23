@@ -8,7 +8,7 @@
 	<Navbar />
 </div>
 <slot />
-<div class="bg-indigo-700">
+<div class="bg-neutral-950/80">
 	<div class="containerr">
 		<Footer />
 	</div>

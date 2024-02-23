@@ -10,6 +10,7 @@
 	import { members } from '$lib/team';
 	import TrackCard from '../components/TrackCard.svelte';
 	import Sponsor from '../components/Sponsor.svelte';
+	import SponsorBento from '../components/sponsorBento.svelte';
 	export let form: any;
 
 	let incorrectEmailError: boolean = false;
@@ -137,38 +138,7 @@
 	<!-- Sponsors -->
 	<section id="sponsors" class="containerr my-16">
 		<div class="flex justify-center mb-5"><SectionHeader title={'Sponsors'} /></div>
-		<div class="flex lg:flex-row flex-col gap-6">
-			<div class="flex flex-col gap-4 lg:w-3/5 lg:m-0 justify-around">
-				<div class="flex flex-col my-2">
-					<h4 class="text-xl lg:text-2xl 2xl:text-3xl font-semibold">
-						These guys make GrizzHacks possible!
-					</h4>
-					<p class="2xl:text-xl lg:text-lg mt-2">
-						Our sponsors enable us to bring an unparalleled experience to Oakland University year
-						after year. If you want to help us continue to empower creativity, collaboration, and
-						entrepreneurship among students, contact <a
-							class="text-indigo-400 underline underline-offset-2 hover:underline-offset-4 transition-all"
-							href="mailto:grizzhacksou@gmail.com">grizzhacksou@gmail.com</a
-						>.
-					</p>
-				</div>
-				<!-- <div class="flex flex-wrap gap-4 items-center justify-center">
-					{#each sponsors as sponsor}
-						<Sponsor
-							name={sponsor.name}
-							tier={sponsor.tier}
-							logo={sponsor.logo}
-							link={sponsor.link}
-						/>
-					{/each}
-				</div> -->
-			</div>
-
-			<div class="w-full lg:w-2/5 relative">
-				<img src="sponsors-min.webp" class="rounded-lg" alt="Sponsors at GrizzHacks" />
-				<div class="inset-0 absolute bg-neutral-900/30 rounded-lg z-10" />
-			</div>
-		</div>
+		<SponsorBento />
 	</section>
 	<!-- FAQ's -->
 	<section id="faq" class="containerr my-16">
