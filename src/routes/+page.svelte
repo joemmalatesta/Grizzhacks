@@ -11,6 +11,7 @@
 	import TrackCard from '../components/TrackCard.svelte';
 	import Sponsor from '../components/Sponsor.svelte';
 	import SponsorBento from '../components/sponsorBento.svelte';
+	import EventDay from '../components/EventDay.svelte';
 	export let form: any;
 
 	let incorrectEmailError: boolean = false;
@@ -125,6 +126,14 @@
 			</div>
 		</div>
 	</div>
+
+	<!-- EVENT SCHEDULE -->
+	<section id="schedule" class="containerr my-10 oultine outline-white">
+		<div class=" flex justify-center mb-5"><SectionHeader title={'Schedule'} /></div>
+		<EventDay />
+	</section>
+
+
 	<!-- Tracks -->
 	<section id="tracks" class="containerr my-10 oultine outline-white">
 		<div class=" flex justify-center mb-5"><SectionHeader title={'Tracks'} /></div>

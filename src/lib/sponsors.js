@@ -12,10 +12,10 @@ export const sponsors = [
 		link: 'https://mlh.io/'
 	},
 	{
-		name: 'Tim Hortons',
-		logo: 'timhortons.svg',
+		name: 'Rocket Mortgage',
+		logo: 'rocket.svg',
 		tier: 'bronze',
-		link: 'https://www.timhortons.com/'
+		link: 'https://www.rocketmortgage.com/'
 	},
 	{
 		name: 'Little Caesars',
