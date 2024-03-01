@@ -109,16 +109,17 @@ export const events = [
 	},
 	{
 		day: 'saturday',
-		name: 'Tech Talk (Cyber OU)',
-		time: '7:30 - 8:00pm',
-		description: 'TBA'
-	},
-	{
-		day: 'saturday',
 		name: 'Game Room (Board Games)',
 		time: '7:00 - 9:00pm',
 		description: 'By the Gaming Guild and Chess Club'
 	},
+	{
+		day: 'saturday',
+		name: 'Tech Talk (Cyber OU)',
+		time: '7:30 - 8:00pm',
+		description: 'TBA'
+	},
+	
 	{
 		day: 'saturday',
 		name: 'Game Room (Video Games)',
