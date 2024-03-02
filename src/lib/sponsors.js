@@ -72,33 +72,45 @@ export const sponsors = [
 		link: 'https://www.oucreditunion.org/'
 	},
 	{
-		name: "Frich",
+		name: 'Frich',
 		logo: 'frich.svg',
 		tier: 'bronze',
 		link: 'https://www.getfrich.com/'
 	},
 	{
-		name: "NordVPN",
+		name: 'NordVPN',
 		logo: 'nordvpn.svg',
 		tier: 'bronze',
 		link: 'https://nordvpn.com/'
 	},
 	{
-		name: "NordPass",
+		name: 'NordPass',
 		logo: 'nordpass.svg',
 		tier: 'bronze',
 		link: 'https://nordvpn.com/'
 	},
 	{
-		name: "Incogni",
+		name: 'Incogni',
 		logo: 'incogni.svg',
 		tier: 'bronze',
 		link: 'https://nordvpn.com/'
 	},
 	{
-		name: "Pepsi",
-		logo: "pepsi.svg",
-		tier: "bronze",
-		link: "https://www.pepsi.com/"
-	}
+		name: 'Pepsi',
+		logo: 'pepsi.svg',
+		tier: 'bronze',
+		link: 'https://www.pepsi.com/'
+	},
+	{
+		name: 'UWM',
+		logo: 'uwm.png',
+		tier: 'gold',
+		link: 'https://www.uwm.com/'
+	},
+	{
+		name: 'Tim Hortons',
+		logo: 'timhortons.svg',
+		tier: 'bronze',
+		link: 'https://www.timhortons.com/'
+	},
 ];
