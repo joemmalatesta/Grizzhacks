@@ -54,7 +54,6 @@
 		<img src="sponsors/{sponsors[11].logo}" alt="{sponsors[11].name} Logo" class="w-60" />
 	</a>
 
-
 	<a
 		href={sponsors[16].link}
 		class="md:p-4 p-2 col-span-1 row-span-1 bg-neutral-950/80 ring-1 ring-neutral-800/30 flex items-center justify-center rounded-md hover:from-[#CD7F32]/40 hover:via-[#CD7F32]/80 hover:to-[#CD7F32]/40 hover:bg-gradient-to-bl"
@@ -98,7 +97,7 @@
 	<!-- ECHO 3D. BRONZE -->
 	<a
 		href={sponsors[5].link}
-		class="p-6 col-span-1 row-span-1 bg-neutral-950/80 ring-1 ring-neutral-800/30 flex items-center justify-center rounded-md hover:from-[#D4AF37]/40 hover:via-[#D4AF37]/80 hover:to-[#D4AF37]/40 hover:bg-gradient-to-bl"
+		class="p-6 col-span-1 row-span-1 bg-neutral-950/80 ring-1 ring-neutral-800/30 flex items-center justify-center rounded-md hover:from-[#CD7F32]/40 hover:via-[#CD7F32]/80 hover:to-[#CD7F32]/40 hover:bg-gradient-to-bl"
 	>
 		<img src="sponsors/{sponsors[5].logo}" alt="{sponsors[5].name} Logo" class="" />
 	</a>
@@ -114,7 +113,7 @@
 	<!-- COMERICA. BRONZE -->
 	<a
 		href={sponsors[4].link}
-		class="p-6 col-span-1 row-span-1 bg-neutral-950/80 ring-1 ring-neutral-800/30 flex items-center justify-center rounded-md hover:from-[#D4AF37]/40 hover:via-[#D4AF37]/80 hover:to-[#D4AF37]/40 hover:bg-gradient-to-bl"
+		class="p-6 col-span-1 row-span-1 bg-neutral-950/80 ring-1 ring-neutral-800/30 flex items-center justify-center rounded-md hover:from-[#CD7F32]/40 hover:via-[#CD7F32]/80 hover:to-[#CD7F32]/40 hover:bg-gradient-to-bl"
 	>
 		<img src="sponsors/{sponsors[4].logo}" alt="{sponsors[4].name} Logo" class="" />
 	</a>
