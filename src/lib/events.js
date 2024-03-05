@@ -81,7 +81,7 @@ export const events = [
 		day: 'saturday',
 		name: 'Tech Talk (Whisker)',
 		time: '4:30 - 5:00pm',
-		description: 'TBA'
+		description: 'Containerization & Microservice Architecture - Alex Muszyn'
 	},
 	{
 		day: 'saturday',
@@ -119,7 +119,7 @@ export const events = [
 		time: '7:30 - 8:00pm',
 		description: 'TBA'
 	},
-	
+
 	{
 		day: 'saturday',
 		name: 'Game Room (Video Games)',
@@ -170,7 +170,7 @@ export const events = [
 		time: '12:00 - 12:30pm',
 		description: 'By Noah Sabaj'
 	},
-    {
+	{
 		day: 'sunday',
 		name: 'Hacking Ends',
 		time: '12:30pm',
@@ -178,20 +178,20 @@ export const events = [
 	},
 	{
 		day: 'sunday',
-		name: "Judging",
+		name: 'Judging',
 		time: '1:00 - 2:00pm',
-        description: ""
+		description: ''
 	},
 	{
 		day: 'sunday',
 		name: 'Lunch (Jimmy Johns)',
 		time: '2:00 - 3:00pm',
-        description: ""
+		description: ''
 	},
 	{
 		day: 'sunday',
 		name: 'Closing Ceremony',
 		time: '3:00 - 3:30pm',
-        description: "Winners announced!"
+		description: 'Winners announced!'
 	}
 ];

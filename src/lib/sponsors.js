@@ -81,7 +81,7 @@ export const sponsors = [
 		name: 'NordVPN',
 		logo: 'nordvpn.svg',
 		tier: 'bronze',
-		link: 'https://nordvpn.com/'
+		link: 'https://incogni.com'
 	},
 	{
 		name: 'NordPass',
