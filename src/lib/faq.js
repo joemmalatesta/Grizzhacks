@@ -59,6 +59,10 @@ export const faq = [
         a: `March 9-10th at Oakland University's Engineering Center. There is free parking outside of the building or in a nearby parking garage.`
     },
     {
+        q: 'Can I bring my own materials?',
+        a: "Yes, you can bring materials but you MUST be sure to specify what you brought vs what you built in your project submission"
+    },
+    {
         q: 'Other questions?',
         a: `You can email <a class="text-indigo-400 underline underline-offset-2 hover:underline-offset-4 transition-all" href="mailto:grizzhacksou@gmail.com">Grizzhacksou@gmail.com</a> with any other questions`
     }

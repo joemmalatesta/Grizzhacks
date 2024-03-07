@@ -63,7 +63,7 @@ export const events = [
 		day: 'saturday',
 		name: 'Workshop (MLH)',
 		time: '2:30 - 3:30pm',
-		description: 'Github Copilot Workshop - Aziman'
+		description: 'Github Copilot Workshop - Kevin'
 	},
 	{
 		day: 'saturday',
