@@ -75,7 +75,7 @@ export const events = [
 		day: 'saturday',
 		name: 'Tech Talk (Little Caesars)',
 		time: '4:00 - 4:30pm',
-		description: 'TBA'
+		description: 'Navigating your IT career path - Tim Somero'
 	},
 	{
 		day: 'saturday',
@@ -91,9 +91,9 @@ export const events = [
 	},
 	{
 		day: 'saturday',
-		name: 'Tech Talk',
+		name: 'Tech Talk (Cyber OU)',
 		time: '5:30 - 6:00pm',
-		description: 'TBA'
+		description: 'Credential Harvesting - David Francis, William Eng, ZeHao He'
 	},
 	{
 		day: 'saturday',
@@ -103,21 +103,9 @@ export const events = [
 	},
 	{
 		day: 'saturday',
-		name: 'Tech Talk ',
-		time: '7:00 - 7:30pm',
-		description: 'TBA'
-	},
-	{
-		day: 'saturday',
 		name: 'Game Room (Board Games)',
 		time: '7:00 - 9:00pm',
 		description: 'By the Gaming Guild and Chess Club'
-	},
-	{
-		day: 'saturday',
-		name: 'Tech Talk (Cyber OU)',
-		time: '7:30 - 8:00pm',
-		description: 'TBA'
 	},
 
 	{
