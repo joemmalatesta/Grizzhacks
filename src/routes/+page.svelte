@@ -70,16 +70,15 @@
 				<p class="text-2xl lg:text-3xl 2xl:text-4xl font-semibold text-white">March 9-10th</p>
 			</div>
 		</div>
-		<div class="flex flex-col gap-4">
+		<div class="flex flex-col gap-1">
 			<a
-				href="https://grizzhacks.typeform.com/apply"
+				href="https://gabriellemack.smugmug.com/GrizzHacks2024"
 				class="flex items-center justify-center p-3 px-5 text-2xl lg:text-3xl 2xl:text-3xl rounded-xl bg-indigo-600 hover:bg-indigo-700 w-fit text-white font-semibold relative ring-2 ring-indigo-700"
-				style="font-family: 'Montserrat', sans-serif;">Apply to GrizzHacks 6</a
+				style="font-family: 'Montserrat', sans-serif;">GrizzHacks 6 Pictures</a
 			>
-			<a
-				href="#about"
-				class="flex items-center justify-center p-2 px-6 text-xl rounded-xl hover:bg-gray-300 bg-white w-fit h-fit text-black font-semibold"
-				style="font-family: 'Montserrat', sans-serif;">Learn more</a
+			<p
+				class="flex text-lg font-semibold"
+				style="font-family: 'Montserrat', sans-serif;">GrizzHacks 7 date  soon!</p
 			>
 		</div>
 	</section>
